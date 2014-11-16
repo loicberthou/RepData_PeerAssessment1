@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -17,7 +22,7 @@ names(totalDataClean) <- c("date", "total.steps")
 hist(totalDataClean$total.steps)
 ```
 
-![plot of chunk unnamed-chunk-2](./PA1_template_files/figure-html/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 ```r
 meanSteps <- mean(totalDataClean$total.steps)
@@ -34,7 +39,7 @@ names(averageDataClean) <- c("interval", "average.steps")
 plot(averageDataClean$interval, averageDataClean$average.steps, type="l", xlab = "Interval", ylab="Average number of steps")
 ```
 
-![plot of chunk unnamed-chunk-3](./PA1_template_files/figure-html/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 ```r
 intervalMaxMean <- averageDataClean[averageDataClean$average.steps==max(averageDataClean$average.steps), "interval"]
@@ -62,7 +67,7 @@ names(mergedDataCleanTotal) <- c("date", "total.steps")
 hist(mergedDataCleanTotal$total.steps)
 ```
 
-![plot of chunk unnamed-chunk-5](./PA1_template_files/figure-html/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
 ```r
 meanSteps <- mean(mergedDataCleanTotal$total.steps)
@@ -93,4 +98,4 @@ lines(mergedAverageDataClean$interval[mergedAverageDataClean$day=="weekend"],
       col=2)
 ```
 
-![plot of chunk unnamed-chunk-6](./PA1_template_files/figure-html/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
